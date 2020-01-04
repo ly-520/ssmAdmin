@@ -21,8 +21,17 @@
 
     <!-- 配置返回视图的路径，以及识别后缀是jsp文件 -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+        <!--<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>-->
         <property name="prefix" value="/WEB-INF/jsp/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
+
+
+
+    <!-- 对静态资源文件的访问 -->
+    <mvc:resources location="/WEB-INF/jsp/admin/css/" mapping="/css/**"/>
+    <mvc:resources location="/WEB-INF/jsp/admin/fonts/" mapping="/fonts/**"/>
+    <mvc:resources location="/WEB-INF/jsp/admin/images/" mapping="/images/**"/>
+    <mvc:resources location="/WEB-INF/jsp/admin/js/" mapping="/js/**"/>
+    <mvc:resources location="/WEB-INF/jsp/admin/lib/" mapping="/lib/**"/>
 </beans>

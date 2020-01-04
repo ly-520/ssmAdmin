@@ -19,4 +19,10 @@ public class LoginController {
         System.out.println("==========================>");
         return "test";
     }
+
+    @RequestMapping("/login2")
+    public String login2(){
+        System.out.println("==========================>");
+        return "admin/login";
+    }
 }
